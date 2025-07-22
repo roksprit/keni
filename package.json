@@ -1,13 +1,11 @@
 {
   "name": "telegram-bot",
   "version": "1.0.0",
-  "description": "Telegram bot using Telegraf",
-  "main": "index.js",
+  "main": "loader.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node loader.js",
+    "prestart": "node subscription-middleware.js"
   },
-  "author": "Your Name",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
     "dotenv": "^16.3.1",

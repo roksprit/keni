@@ -1,6 +1,11 @@
 const express = require('express');
 const crypto = require('crypto');
 const app = express();
+// في أي أمر تريد تطبيق الاشتراك الإجباري
+const isSubscribed = await global.enforceSubscription(msg.chat.id, msg.from.id);
+if (!isSubscribed) return;
+
+// أكمل تنفيذ الأمر العادي
 
 const key = '12345678901234567890123456789012';
 
